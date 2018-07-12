@@ -1,0 +1,64 @@
+* {
+    margin: 0;
+    padding: 0;
+    /*padding and margin will not be calculated with the total width or height of the element*/
+    box-sizing: border-box;
+}
+
+body {
+    font-family: "Lato", sans-serif;
+    font-weight: 400;
+    font-size: 16px;
+    line-height: 1.7;
+    color: #777;
+    padding: 30px;
+}
+
+.header {
+    height: 95vh;
+    background-image: linear-gradient( to right bottom, rgba(126, 213, 110, 0.8), rgba(40, 180, 131, 0.8)), url('../img/hero.jpg');
+    /*stretches the image so it fills the container*/
+    background-size: cover;
+    /*ensures that the image statys at the top of the container*/
+    background-position: top;
+    clip-path: polygon(0 0, 100% 0, 100% 75%, 0 100%);
+    /*relative position to the child elements from which they will start if they are absolute*/
+    position: relative;
+}
+
+.logo-box {
+    position: absolute;
+    top: 40px;
+    left: 40px;
+}
+
+.logo {
+    height: 35px;
+}
+
+.text-box {
+    position: absolute;
+    top: 40%;
+    left: 50%;
+    /*element will be shifted % to the top and left*/
+    transform: translate(-50%, -50%);
+}
+
+.heading-primary {
+    color: white;
+    text-transform: uppercase;
+}
+
+.heading-primary-main {
+    display: block;
+    font-weight: 700;
+    font-size: 60px;
+    letter-spacing: 35px;
+}
+
+.heading-primary-sub {
+    display: block;
+    font-weight: 400;
+    font-size: 20px;
+    letter-spacing: 17.4px;
+}
